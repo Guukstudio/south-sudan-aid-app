@@ -1,0 +1,69 @@
+{
+  "alerts": [
+    {
+      "id": 1,
+      "severity": "critical",
+      "title": "Urgent Flood Warning in Fangak County",
+      "timestamp": "2023-10-27T09:00:00Z",
+      "details": "Heavy rains have caused the Nile to overflow. Evacuate to higher ground immediately. Aid stations are being set up in Old Fangak."
+    },
+    {
+      "id": 2,
+      "severity": "warning",
+      "title": "Cholera Outbreak Reported in Leer Town",
+      "timestamp": "2023-10-26T15:30:00Z",
+      "details": "Boil all drinking water. MSF has opened a treatment center near the main market. Practice hand washing."
+    },
+    {
+      "id": 3,
+      "severity": "info",
+      "title": "WFP Food Distribution in Bentiu PoC Site",
+      "timestamp": "2023-10-25T11:00:00Z",
+      "details": "Distribution begins tomorrow at 9 AM at Sector 2. Please bring your registration card."
+    }
+  ],
+  "services": [
+    {
+      "id": 101,
+      "region": "Unity",
+      "type": "food",
+      "name": "WFP Food Center",
+      "location": "Bentiu"
+    },
+    {
+      "id": 102,
+      "region": "Unity",
+      "type": "health",
+      "name": "MSF Clinic",
+      "location": "Leer"
+    },
+    {
+      "id": 103,
+      "region": "Jonglei",
+      "type": "water",
+      "name": "ICRC Clean Water Point",
+      "location": "Bor Town"
+    },
+    {
+      "id": 104,
+      "region": "Jonglei",
+      "type": "health",
+      "name": "IRC Health Post",
+      "location": "Ayod"
+    },
+    {
+      "id": 105,
+      "region": "Upper Nile",
+      "type": "shelter",
+      "name": "UNHCR IDP Camp",
+      "location": "Malakal"
+    },
+    {
+      "id": 106,
+      "region": "Upper Nile",
+      "type": "health",
+      "name": "MSF Hospital",
+      "location": "Malakal"
+    }
+  ]
+}

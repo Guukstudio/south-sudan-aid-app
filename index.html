@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Sudan AidConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- For a real app, you would use a proper manifest for offline capabilities -->
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>🇸🇸 AidConnect South Sudan</h1>
+            <p class="subtitle">Your connection to life-saving services.</p>
+        </header>
+
+        <nav id="app-nav">
+            <button class="nav-btn active" data-target="alerts">🛰️ Alerts</button>
+            <button class="nav-btn" data-target="map">📍 Find Services</button>
+            <button class="nav-btn" data-target="aid">📤 Request Aid</button>
+            <button class="nav-btn" data-target="donate">🤝 Donate</button>
+        </nav>
+
+        <main id="app-main">
+            <!-- Loading Spinner -->
+            <div id="loader" class="loader"></div>
+
+            <!-- Alerts Section -->
+            <section id="alerts" class="app-section active">
+                <h2>Recent Alerts</h2>
+                <div id="alert-list" class="card-container">
+                    <!-- Alerts will be dynamically inserted here -->
+                </div>
+            </section>
+
+            <!-- Services Map Section -->
+            <section id="map" class="app-section">
+                <h2>Find Humanitarian Services</h2>
+                <div class="filters">
+                    <select id="region-select">
+                        <option value="all">All Regions</option>
+                        <!-- Options will be dynamically inserted here -->
+                    </select>
+                    <select id="service-type-select">
+                        <option value="all">All Service Types</option>
+                        <option value="food">📦 Food</option>
+                        <option value="health">🏥 Health</option>
+                        <option value="shelter">⛺ Shelter</option>
+                        <option value="water">💧 Water</option>
+                    </select>
+                </div>
+                <div id="service-list" class="card-container">
+                    <!-- Service cards will be dynamically inserted here -->
+                </div>
+            </section>
+
+            <!-- Aid Request Section -->
+            <section id="aid" class="app-section">
+                <h2>Request Aid (Anonymous)</h2>
+                <p class="privacy-note">Your request is sent securely. No personal name is required.</p>
+                <form id="aid-form">
+                    <select id="aid-need-type" required>
+                        <option value="" disabled selected>What do you need?</option>
+                        <option value="food">Food</option>
+                        <option value="water">Clean Water</option>
+                        <option value="medical">Medical Help</option>
+                        <option value="shelter">Shelter</option>
+                    </select>
+                    <input type="text" id="aid-location" placeholder="Your nearest town or camp" required>
+                    <textarea id="aid-details" placeholder="Add more details (e.g., 'for a family of 5')" required></textarea>
+                    <button type="submit">Send Secure Request</button>
+                </form>
+            </section>
+
+            <!-- Donate Section -->
+            <section id="donate" class="app-section">
+                <h2>Support a Family</h2>
+                <div class="donation-card">
+                    <p>Your contribution provides critical supplies directly to those in need.</p>
+                    <form id="donation-form">
+                        <div class="donation-input">
+                            <span>$</span>
+                            <input type="number" id="donation-amount" value="5" min="1" required>
+                        </div>
+                        <button type="submit">Donate Now</button>
+                    </form>
+                    <div class="donation-tracker">
+                        <h4>Community Donations Total:</h4>
+                        <span id="donation-total">$0.00</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
