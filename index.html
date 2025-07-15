@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>South Sudan AidConnect</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- For a real app, you would use a proper manifest for offline capabilities -->
 </head>
 <body>
     <div class="app-container">
@@ -19,6 +18,7 @@
             <button class="nav-btn" data-target="map">📍 Find Services</button>
             <button class="nav-btn" data-target="aid">📤 Request Aid</button>
             <button class="nav-btn" data-target="donate">🤝 Donate</button>
+            <button class="nav-btn" data-target="news">📰 News</button>
         </nav>
 
         <main id="app-main">
@@ -90,7 +90,19 @@
                     </div>
                 </div>
             </section>
+
+            <!-- News Section -->
+            <section id="news-section" class="app-section">
+                <h2>South Sudan News</h2>
+                <div id="news-list" class="card-container">
+                    <!-- News items will be dynamically inserted here -->
+                </div>
+            </section>
         </main>
+
+        <footer>
+            <p>🔒 Your data is secure. Works offline. Powered by communities.</p>
+        </footer>
     </div>
 
     <!-- Toast Notification Container -->
